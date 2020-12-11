@@ -1,0 +1,40 @@
+#bitbucket-pipelines.yml
+image: node:10.15.3
+
+definitions:
+  caches:
+    npm: ~/.npm
+  steps:
+    - step: &build
+        name: Build React Project
+        caches:
+          - npm
+        script:
+          - npm install
+          - unset CI
+          - npm run build
+          - mkdir packaged
+          - tar -czvf packaged/${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}.tar.gz -C build .
+        artifacts:
+          - packaged/**
+    - step: &deploy
+        name: Deploy to Droplet
+        image: alpine
+        script:
+          - mkdir upload
+          - tar -xf packaged/${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}.tar.gz -C upload
+          - apk update && apk add openssh rsync
+          - rsync -a -e "ssh -o StrictHostKeyChecking=no" --delete upload/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/releases/${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}
+          - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "ln -nfs releases/${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT} $DEPLOY_PATH/current"
+          - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "chmod -R u+rwX,go+rX,go-w $DEPLOY_PATH"
+          - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "ls -dt $DEPLOY_PATH/releases/*/ | tail -n +4 | xargs rm -rf"
+
+pipelines:
+  branches:
+    master:
+      - step: *build
+      - step:
+          <<: *deploy
+          deployment: production
+
+

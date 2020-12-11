@@ -1,0 +1,49 @@
+{
+  "dash": {
+    "welcome": "Bem-vindo!"
+  },
+  "users": {
+    "submit": "Enviar",
+    "back": "Voltar"
+  },
+  "customers": {
+    "title": "Clientes",
+    "btnNew": "Novo Cliente",
+    "data": {
+      "id": "#",
+      "name": "Nome",
+      "dob": "Data de nascimento",
+      "rg": "RG",
+      "cpf": "CPF",
+      "phone": "Telefone",
+      "actions": "Ações"
+    }
+  },
+  "address": {
+    "title": "Endereços",
+    "btnNew": "Novo Endereço",
+    "modal": {
+      "title": {
+        "add": "Novo Endereço"
+      }
+    },
+    "data": {
+      "city": "Cidade",
+      "state": "Estado",
+      "country": "Pais",
+      "cep": "CEP",
+      "number": "Número",
+      "actions": "Ações"
+    }
+  },
+
+  "noData": "Nenhum registro encontrado",
+  "recordData": "Dados Cadastrais",
+  "editing": "Editando",
+  "pagination": {
+    "showing": "Exibindo",
+    "to": "à",
+    "of": "de",
+    "records": "registros"
+  }
+}

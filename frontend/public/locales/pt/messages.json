@@ -1,0 +1,22 @@
+{
+  "offline": "Erro na conexão!",
+  "backendOff": "[BE] - Erro na conexão!",
+  "authError": "Dados de login inválidos!",
+  "success": "Sucesso!",
+  "randomError": "Ocorreu um erro inesperado.",
+  "expiredToken": "Token expirado.",
+  "invalidData": "Dados Inválidos.",
+  "unauthorized": "Você não tem permissão!",
+  "unableToFetch": "Não foi possível recuperar os dados. Ocorreu um erro.",
+  "notAcceptable": "Dados não encontrados.",
+  "failure": "Erro!",
+  "edit": "Editar",
+  "add": "Adicionar",
+  "delete": "Excluir",
+  "confirmDelete": "Confirma exclusão?",
+  "yes": "Sim",
+  "no": "Não",
+  "save": "Salvar",
+  "cancel": "Cancelar",
+  "default": "Padrão"
+}

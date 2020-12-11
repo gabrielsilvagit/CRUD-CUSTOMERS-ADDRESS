@@ -1,0 +1,43 @@
+{
+  "login": {
+    "name": {
+      "placeholder": "seu nome"
+    },
+    "email": {
+      "placeholder": "seu email"
+    },
+    "password": {
+      "placeholder": "sua senha"
+    },
+    "submit": "Entrar"
+  },
+  "remember": {
+    "email": {
+      "placeholder": "informe o e-mail cadastrado"
+    },
+    "submit": "Enviar Link"
+  },
+  "reset": {
+    "email": {
+      "placeholder": "informe seu e-mail"
+    },
+    "password": {
+      "placeholder": "informe sua nova senha"
+    },
+    "passwordConfirmation": {
+      "placeholder": "confirme sua nova senha"
+    },
+    "submit": "Redefinir"
+  },
+  "customer_id": "cliente",
+  "product_id": "produto",
+  "types": {
+    "string": "texto",
+    "number": "numérico",
+    "integer": "inteiro",
+    "boolean": "lógico"
+  },
+  "name": "nome",
+  "email": "e-mail",
+  "address_number": "Número"
+}

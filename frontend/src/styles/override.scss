@@ -1,0 +1,190 @@
+/****************************
+PRINCIPAL COLOR
+****************************/
+
+$color: #43b7cc;
+
+/****************************
+RADIO GROUP
+****************************/
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  background: $color;
+  border-color: $color;
+}
+
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+  background: lighten($color, 10);
+  border-color: lighten($color, 10);
+}
+
+.ant-radio-button-wrapper:hover {
+  color: $color;
+}
+
+/****************************
+SWITCH
+****************************/
+.ant-switch {
+  background-color: #f6322d;
+}
+.ant-switch-checked {
+  background-color: #00dd0f;
+}
+
+/****************************
+TABLE
+****************************/
+
+.ant-table-content {
+  display: inline-block;
+  width: 100%;
+}
+
+.ant-table-small {
+  border: 0;
+}
+
+.expiratedContract {
+  background: #e50000 !important;
+}
+
+.expiratedContract:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+  background: #e50000 !important;
+}
+.desactiveContact {
+  background: #fcc !important;
+}
+
+.desactiveContact:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+  background: #fcc !important;
+}
+
+.ant-table-placeholder {
+  display: none;
+}
+
+/****************************
+PAGINATION
+****************************/
+
+.ant-pagination-item:focus,
+.ant-pagination-item:hover {
+  border-color: $color;
+}
+
+.ant-pagination-prev:not(.ant-pagination-disabled) > a > i > svg,
+.ant-pagination-next:not(.ant-pagination-disabled) > a > i > svg {
+  color: #888;
+  font-weight: bold;
+
+  &:hover {
+    color: $color;
+    transform: scale(1.1);
+  }
+}
+
+.ant-pagination-item {
+  a {
+    color: #888;
+    font-weight: bold;
+
+    &:hover {
+      color: $color;
+      transform: scale(1.06);
+    }
+  }
+}
+.ant-pagination-item-active,
+.ant-pagination-item-active:active,
+.ant-pagination-item-active:focus {
+  border-color: $color;
+
+  a {
+    color: $color;
+  }
+
+  &:hover {
+    // font-weight: bold;
+    border-color: $color;
+    background: $color;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+form {
+  h3 {
+    color: #888;
+    text-transform: uppercase;
+    margin: 15px 8px !important;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .ant-row h3 {
+    margin: 15px 8px 5px;
+  }
+}
+
+/****************************
+POPOVER
+****************************/
+
+.ant-popover {
+  .ant-popover-content {
+    border: 1px solid #a1a1a1;
+    border-radius: 6px;
+
+    .ant-popover-arrow {
+      border-bottom: 1px solid #a1a1a1;
+      border-right: 1px solid #a1a1a1;
+      z-index: 999999;
+      background: #fff;
+    }
+  }
+
+  .ant-btn-primary {
+    color: #fff;
+    background-color: #e50000;
+    border-color: #e50000;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+  }
+}
+
+/****************************
+ANTD TAG
+****************************/
+
+.ant-tag {
+  min-width: 80px;
+  text-align: center;
+}
+
+/****************************
+highcharts
+****************************/
+
+.highcharts-credits {
+  display: none;
+}
+
+.highcharts-label {
+  text-transform: uppercase;
+}
+
+.highcharts-axis-labels {
+  text-transform: uppercase;
+  text {
+    text-transform: uppercase;
+  }
+}
+.highcharts-xaxis-labels {
+  text-transform: uppercase;
+  text {
+    text-transform: uppercase;
+  }
+}
